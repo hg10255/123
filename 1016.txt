@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8" />
+<script>
+ function getValue() {
+        var value = document.getElementById("rangeInput").value;
+        var result = document.getElementById("result");
+        var email = document.getElementById("inputE").value;
+        var age = document.getElementById("inputA").value;
+        var date = document.getElementById("inputD").value;
+        result.innerText = email + ";" + date + ";" + age + ";" + value;
+    }
+</script>
+<form>
+	<fieldset>
+		<legend>
+			请您输入信息：
+		</legend>
+		<table>
+			<tr>
+				<td>
+					邮箱：
+				</td>
+				<td>
+					<input type="email" id="inputE" autofocus="ture">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					出生日期：
+				</td>
+				<td>
+					<input type="date" id="inputD">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					年龄：
+				</td>
+				<td>
+					<input type="text" placeholder="your age" id="inputA">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					你希望的分数：
+				</td>
+				<td>
+					<input id="rangeInput" type="range" min="0" max="100" onChange="getValue()">
+				</td>
+			</tr>
+		</table>
+		<span id="result"></span>
+		
+	</fieldset>
+</form>
+</html>
+.
+
